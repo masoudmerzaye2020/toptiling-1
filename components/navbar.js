@@ -5,6 +5,11 @@ import {menu} from './menu'
 
 function Navbar() {
     const [navbar, setNavbar] = useState(false);
+    const HandleSideMenu = (flag = false, index = undefined) => {
+      setActiveMenu(index)
+      flag && setIsSideMenuOpen(!isSideMenuOpen)
+      isSideMenuOpen && setIsSideMenuOpen(false)
+    }
   return (
     <>
     <nav className="w-full bg-gray-800 shadow">
@@ -62,8 +67,8 @@ function Navbar() {
               {menu.map((item,i)=>{
                 return(
                   
-                    <li key={i} className="text-white">
-                      <Link href={item.url}>
+                    <li key={i} className="text-white"  >
+                      <Link href={item.url} onClick={() => HandleSideMenu(false, index)} >
                         {item.title}
                       </Link>
                     </li>                
@@ -72,6 +77,7 @@ function Navbar() {
               })}
 
             </ul>
+            
 
              {/*  <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-white">
