@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import { useState } from 'react';
+import {menu} from './menu'
 
 function Navbar() {
     const [navbar, setNavbar] = useState(false);
@@ -57,7 +58,22 @@ function Navbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+              {menu.map((item,i)=>{
+                return(
+                  
+                    <li key={i} className="text-white">
+                      <Link href={item.url}>
+                        {item.title}
+                      </Link>
+                    </li>                
+                
+                )
+              })}
+
+            </ul>
+
+             {/*  <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-white">
                   <Link href="/">
                     Home
@@ -88,7 +104,7 @@ function Navbar() {
                     Contact Us
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
