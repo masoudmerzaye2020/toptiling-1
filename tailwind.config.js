@@ -5,7 +5,21 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'black': '#0B0C10',
+      'lightblack':'#1F2833',
+      'gray':'#C5C6C7',
+      'lightcyan':'#66FCf1',
+      'darkcyan':'#45A29E',
+    
+    },
+    extend: {
+      backgroundImage: {
+        'my_bg_image' : "url('/image/Desktop-20.jpg')",
+      }
+    },
   },
   plugins: [],
 }

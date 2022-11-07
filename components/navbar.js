@@ -12,12 +12,12 @@ function Navbar() {
     }
   return (
     <>
-    <nav className="w-full bg-gray-800 shadow">
+    <nav className="w-full bg-black text-lightcyan  shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
-               <Link href="#">
-                <h2 className="text-2xl text-white font-bold">Top Tiling</h2>
+               <Link href="/">
+                <h2 className="text-2xl  font-bold">Top Tiling</h2>
               </Link> 
               <div className="md:hidden">
                 <button
@@ -63,54 +63,19 @@ function Navbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <ul className="items-center justify-center space-y-1 md:flex md:space-x-1 md:space-y-0 text-center ">
               {menu.map((item,i)=>{
-                return(
-                  
-                    <li key={i} className="text-white"  >
+                return(           
+                    <li key={i} className="hover:text-darkcyan  py-3 px-4 hover:border-b-2 border-lightcyan"  >
                       <Link href={item.url} onClick={() => HandleSideMenu(false, index)} >
                         {item.title}
                       </Link>
                     </li>                
-                
                 )
               })}
 
             </ul>
-            
-
-             {/*  <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-white">
-                  <Link href="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="text-white">
-                  <Link href="/about">
-                     About Us
-                  </Link>
-                </li>
-                <li className="text-white">
-                  <Link href="/services">
-                     Services
-                  </Link>
-                </li>
-                <li className="text-white">
-                  <Link href="/work">
-                    Our Work
-                  </Link>
-                </li>
-                <li className="text-white">
-                  <Link href="/quate">
-                    Free Quate
-                  </Link>
-                </li>
-                <li className="text-white">
-                  <Link href="/contact">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul> */}
+  
             </div>
           </div>
         </div>
