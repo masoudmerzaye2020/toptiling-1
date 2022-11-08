@@ -12,8 +12,8 @@ function Navbar() {
     }
   return (
     <>
-    <nav className="w-full bg-black text-lightcyan  shadow">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+    <nav className="w-full bg-black bg-opacity-80 text-lightcyan fixed z-20  shadow">
+        <div className="justify-between px-4 md:px-2 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
                <Link href="/">
