@@ -12,7 +12,7 @@ function Navbar() {
     }
   return (
     <>
-    <nav className="w-full bg-black bg-opacity-80 text-lightcyan fixed z-20  shadow">
+    <nav className="w-full bg-black bg-opacity-80 text-teal-400 fixed z-20  shadow">
         <div className="justify-between px-4 md:px-2 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -66,7 +66,7 @@ function Navbar() {
             <ul className="items-center justify-center space-y-1 md:flex md:space-x-1 md:space-y-0 text-center ">
               {menu.map((item,i)=>{
                 return(           
-                    <li key={i} className="hover:text-darkcyan  py-3 px-4 hover:border-b-2 border-lightcyan"  >
+                    <li key={i} className="hover:text-teal-700  py-3 px-4 hover:border-b-2 border-teal-500"  >
                       <Link href={item.url} onClick={() => HandleSideMenu(false, index)} >
                         {item.title}
                       </Link>
