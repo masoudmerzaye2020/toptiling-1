@@ -1,7 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Box from '../components/box'
+import Container from '../components/container'
+import Imagebox from '../components/imagebox'
+import Section from '../components/section'
 import Title from '../components/title'
+import Gallery from '../components/gallery'
+import Divider from '../components/divider'
 
 
 
@@ -27,16 +32,25 @@ export default function Home() {
       </div> 
 
 
-    <section className='bg-zinc-600'>
-      <div className=''>
-        <Title title={'Leave Your Renovation in the Hands of Experts'}/>
-      </div>
-      <div>
-        <div>
-          <Box title={'Waterproofing'}/>
+    
+    <Section>
+      <Container>
+      <Title className={''} title={'What we Offer'}/>
+        <div className='grid lg:grid-cols-2 gap-1 md:gap-3 mt-3'>
+          <Imagebox src={'/image/wallandfloor.png'} title={'Wall and Floor Tiling'} desc={'At North Suburban Tilers, we specialize in wall and floor tiling around inner and outer northern regions of Melbourne.'}/>
+          <Imagebox src={'/image/bathroom1.png'} title={'Bathroom Renovations'} desc={'Our team has over 20 years experience in the industry. Leave your bathroom renovation to the professionals.'}/>
+          <Imagebox src={'/image/water-tap.png'} title={'Waterproofing'} desc={'We have a qualified waterproofing team which can not wait to help work on your next project.'}/>
+          <Imagebox src={'/image/floor.png'} title={'Floor Screeding'} desc={'Looking for the perfect tiling job? We can screed your floor to get a perfectly levelled surface.'}/>
+          <Imagebox src={'/image/house-cleaning.png'} title={'Grouting & Cleaning'} desc={'We can restore the grout between your tiles. Our team will clean or replace the grout so you can enjoy new floors.'}/>
+          <Imagebox src={'/image/paint-roller.png'} title={'Tile Sealing'} desc={'We can protect your tiles by applying sealer, this will ensure your tiles don not get stained and also help with cleaning.'}/>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
+    <Divider/>
+    
+        <Title className={''} title={'Gallery'}/>
+        <Gallery/>
+
 
     </>
   )
